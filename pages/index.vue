@@ -124,7 +124,7 @@ div
                 required)#contact-email
               input(type='hidden',
                 name='form-name',
-                value='email'
+                value='Contact Form'
               )
             .sr-only
               label Don't fill this out if you're human:
