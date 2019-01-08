@@ -105,12 +105,13 @@ div
           #[a(href='http://hackforla-slack.herokuapp.com/', target='_blank') check us out on Slack]?
           Looking to volunteer?
         form.contact-form(
-            action='thank-you',
+            action='/?thanks=1',
             method='post',
             name='Contact Form',
-            netlify,
-            netlify-honeypot='bot-field',
-            @submit.prevent='submitFeedback')
+            data-netlify="true",
+            data-netlify-honeypot="bot-field",
+            data-netlify-recaptcha="true",
+            )
           textarea(placeholder='Send us a message',
               name='message',
               v-model='feedbackText',
@@ -220,5 +221,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
