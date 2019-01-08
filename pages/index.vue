@@ -105,7 +105,6 @@ div
           #[a(href='http://hackforla-slack.herokuapp.com/', target='_blank') check us out on Slack]?
           Looking to volunteer?
         form.contact-form(
-            action='/?thanks=1',
             method='post',
             name='Contact Form',
             data-netlify="true",

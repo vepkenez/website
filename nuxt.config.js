@@ -1,8 +1,8 @@
 const metaDescription = 'https://www.hackforla.org/images/hacknight-women.jpg';
 module.exports = {
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: 'Hack for LA',
     meta: [
@@ -31,16 +31,16 @@ module.exports = {
   css: ['~/assets/styles/main.scss'],
   plugins: ['~/plugins/vue-smooth-scroll'],
   /*
-  ** Customize the progress bar color
-  */
+   ** Customize the progress bar color
+   */
   loading: { color: '#fa114f' },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** Run ESLint on save
-    */
+     ** Run ESLint on save
+     */
     extend(config) {
       const svgRule = config.module.rules.find(
         rule => rule.loader === 'url-loader'
