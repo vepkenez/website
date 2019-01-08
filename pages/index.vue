@@ -105,24 +105,27 @@ div
           #[a(href='http://hackforla-slack.herokuapp.com/', target='_blank') check us out on Slack]?
           Looking to volunteer?
         form.contact-form(
-            method='post',
+            method='POST',
             name='Contact Form',
             data-netlify="true",
             data-netlify-honeypot="bot-field",
-            data-netlify-recaptcha="true",
-            )
-          textarea(placeholder='Send us a message',
-              name='message',
-              v-model='feedbackText',
-              required)
+          )
           .form-controls
             .form-input
+              textarea(placeholder='Send us a message',
+                name='message',
+                v-model='feedbackText',
+                required)
               label(for='contact-email').sr-only Enter your email address
               input(type='email',
                 name='email',
                 placeholder='Enter your email address',
                 v-model='feedbackEmail'
                 required)#contact-email
+              input(type='hidden',
+                name='form-name',
+                value='email'
+              )
             .sr-only
               label Don't fill this out if you're human:
                 input(name='bot-field')
